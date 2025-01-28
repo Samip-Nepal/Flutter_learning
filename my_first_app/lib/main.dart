@@ -2,9 +2,16 @@ import 'package:flutter/material.dart';
 import 'package:google_fonts/google_fonts.dart';
 
 void main() {
-  WidgetsFlutterBinding.ensureInitialized(); 
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(MaterialApp(
-    home: Scaffold(
+    home: Myhome(),
+  ));
+}
+class Myhome extends StatelessWidget {
+
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
       appBar: AppBar(
         title: Text(
           'Hi everyone',
@@ -19,7 +26,7 @@ void main() {
       body: Center(
         child: Text(
           'NAMASTE NEPAL',
-          style: GoogleFonts.pacifico(
+          style: GoogleFonts.openSans(
             textStyle: TextStyle(
               fontSize: 30,
               fontWeight: FontWeight.bold,
@@ -28,12 +35,12 @@ void main() {
         ),
       ),
       floatingActionButton: FloatingActionButton(
-        onPressed: () {
-          // ...existing code...
-        },
+        onPressed: () {},
         backgroundColor: Color(0xFF00FF00),
-        child: Text('Click'),
+        child: 
+          Center(child: Text('Click me '),)
+            
       ),
-    ),
-  ));
+    ) ;
+  }
 }
