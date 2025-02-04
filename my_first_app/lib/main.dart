@@ -24,15 +24,59 @@ class Myhome extends StatelessWidget {
           ),
         ),
       ),
-      body: Container(
+      body: Column(
+        mainAxisAlignment: MainAxisAlignment.center,
+        crossAxisAlignment: CrossAxisAlignment.center,
+        children: [
+          Text("Hello World"),
+          ElevatedButton(
+            onPressed: () {},
+            child: Text(
+              "Click Me",
+              style: TextStyle(
+                fontSize: 20,
+                color: Color(0xFF00FF00),
+                fontWeight: FontWeight.bold,
+              ),
+            ),
+          ),
+          Container(
+            height: 50,
+            width: 50,
+            margin: EdgeInsets.all(20),
+            padding: EdgeInsets.all(20),
+            color: Color(0xFF00FF00),
+          )
+        ],
+      ),
+      /* Padding(
+        padding: const EdgeInsets.all(100),
+        child: Text(
+          "Hello World",
+          style: TextStyle(
+            fontSize: 30,
+            color: Color(0xFF00FF00),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ), */
+      /*       Container(
         height: 200,
         width: 200,
         margin: EdgeInsets.all(20),
         padding: EdgeInsets.all(20),
+        color: Color(0xFF00FF00),
         child: Text(
           "Hello World",
+          style: TextStyle(
+            fontSize: 30,
+            color: Colors.white,
+            fontWeight: FontWeight.bold,
+          ),
         ),
-        /*  // child: Text(
+      ), */
+
+      /*  // child: Text(
            "Hello World",
            style: TextStyle(
             fontSize: 30,
@@ -40,7 +84,7 @@ class Myhome extends StatelessWidget {
              fontWeight: FontWeight.bold,
            ),
          ), */
-        /*   child: Image.asset('assets/random.jpg'),
+      /*   child: Image.asset('assets/random.jpg'),
          child: TextButton(
            onPressed: () {
              print("Button Pressed");
@@ -54,7 +98,7 @@ class Myhome extends StatelessWidget {
              ),
            ),
          ), */
-        /*  child: ElevatedButton.icon(
+      /*  child: ElevatedButton.icon(
         onPressed: () {
           print("Button Pressed");
         },
@@ -67,7 +111,7 @@ class Myhome extends StatelessWidget {
         ),
       ),
       ), */
-      ),
+
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Color(0xFF00FF00),
