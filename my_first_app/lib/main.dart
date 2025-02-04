@@ -24,30 +24,37 @@ class Myhome extends StatelessWidget {
           ),
         ),
       ),
-      body: Center(
-          // child: Text(
-          //   "Hello World",
-          //   style: TextStyle(
-          //     fontSize: 30,
-          //     color: Color(0xFF00FF00),
-          //     fontWeight: FontWeight.bold,
-          //   ),
-          // ),
-          // child: Image.asset('assets/random.jpg'),
-          // child: TextButton(
-          //   onPressed: () {
-          //     print("Button Pressed");
-          //   },
-          //   child: Text(
-          //     "Click Me",
-          //     style: TextStyle(
-          //       fontSize: 20,
-          //       color: Color(0xFF00FF00),
-          //       fontWeight: FontWeight.bold,
-          //     ),
-          //   ),
-          // ),
-          child: ElevatedButton.icon(
+      body: Container(
+        height: 200,
+        width: 200,
+        margin: EdgeInsets.all(20),
+        padding: EdgeInsets.all(20),
+        child: Text(
+          "Hello World",
+        ),
+        /*  // child: Text(
+           "Hello World",
+           style: TextStyle(
+            fontSize: 30,
+            color: Color(0xFF00FF00),
+             fontWeight: FontWeight.bold,
+           ),
+         ), */
+        /*   child: Image.asset('assets/random.jpg'),
+         child: TextButton(
+           onPressed: () {
+             print("Button Pressed");
+           },
+           child: Text(
+             "Click Me",
+             style: TextStyle(
+               fontSize: 20,
+               color: Color(0xFF00FF00),
+               fontWeight: FontWeight.bold,
+             ),
+           ),
+         ), */
+        /*  child: ElevatedButton.icon(
         onPressed: () {
           print("Button Pressed");
         },
@@ -58,7 +65,9 @@ class Myhome extends StatelessWidget {
         label: Text(
           "Click Me",
         ),
-      )),
+      ),
+      ), */
+      ),
       floatingActionButton: FloatingActionButton(
         onPressed: () {},
         backgroundColor: Color(0xFF00FF00),
