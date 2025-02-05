@@ -6,9 +6,15 @@ void main() {
   ));
 }
 
-class Myhome extends StatelessWidget {
+class Myhome extends StatefulWidget {
   const Myhome({super.key});
 
+  @override
+  State<Myhome> createState() => _MyhomeState();
+}
+
+class _MyhomeState extends State<Myhome> {
+  int count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -24,7 +30,37 @@ class Myhome extends StatelessWidget {
           ),
         ),
       ),
-      body: Row(
+      body: Container(
+        margin: EdgeInsets.all(150),
+        child: Text(
+          "$count",
+          style: TextStyle(
+            fontSize: 30,
+            color: Color(0xFF00FF00),
+            fontWeight: FontWeight.bold,
+          ),
+        ),
+      ),
+      floatingActionButton: FloatingActionButton(
+        onPressed: () {
+          setState(() {
+            count++;
+          });
+        },
+        backgroundColor: Color(0xFF00FF00),
+        child: Center(
+          child: Icon(
+            Icons.airport_shuttle,
+            size: 30,
+            color: Colors.white,
+          ),
+        ),
+      ),
+    );
+  }
+}
+
+      /* Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
           Expanded(
@@ -56,7 +92,7 @@ class Myhome extends StatelessWidget {
             ),
           ),
         ],
-      ),
+      ), */
 
       /* Column(
         mainAxisAlignment: MainAxisAlignment.center,
@@ -146,17 +182,4 @@ class Myhome extends StatelessWidget {
       ),
       ), */
 
-      floatingActionButton: FloatingActionButton(
-        onPressed: () {},
-        backgroundColor: Color(0xFF00FF00),
-        child: Center(
-          child: Icon(
-            Icons.airport_shuttle,
-            size: 30,
-            color: Colors.white,
-          ),
-        ),
-      ),
-    );
-  }
-}
+      
