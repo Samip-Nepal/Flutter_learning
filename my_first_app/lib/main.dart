@@ -24,7 +24,41 @@ class Myhome extends StatelessWidget {
           ),
         ),
       ),
-      body: Column(
+      body: Row(
+        mainAxisAlignment: MainAxisAlignment.center,
+        children: [
+          Expanded(
+            flex: 1,
+            child: Image.asset('assets/random.jpg'),
+          ),
+          Expanded(
+            flex: 2,
+            child: Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.red,
+              child: Text("Hello "),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.green,
+              child: Text("Hello "),
+            ),
+          ),
+          Expanded(
+            flex: 1,
+            child: Container(
+              padding: EdgeInsets.all(20),
+              color: Colors.blue,
+              child: Text("Hello "),
+            ),
+          ),
+        ],
+      ),
+
+      /* Column(
         mainAxisAlignment: MainAxisAlignment.center,
         crossAxisAlignment: CrossAxisAlignment.center,
         children: [
@@ -48,7 +82,7 @@ class Myhome extends StatelessWidget {
             color: Color(0xFF00FF00),
           )
         ],
-      ),
+      ), */
       /* Padding(
         padding: const EdgeInsets.all(100),
         child: Text(
