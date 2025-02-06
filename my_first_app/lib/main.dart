@@ -14,12 +14,39 @@ class Myhome extends StatefulWidget {
 }
 
 class _MyhomeState extends State<Myhome> {
-  int count = 0;
+  List<String> information = [
+    "The ODI series against England is India's only tune-up tournament for the Champions Trophy",
+    "to be held in Pakistan and Dubai from February 19"
+  ];
+  // int count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(
-        backgroundColor: Colors.white,
+        backgroundColor: Colors.white70,
+        appBar: AppBar(
+          backgroundColor: Colors.white70,
+        ),
+        body: Column(
+          children: information.map((data) {
+            return Container(
+              margin: EdgeInsets.all(20),
+              padding: EdgeInsets.all(20),
+              color: Colors.green,
+              child: Text(
+                data,
+                style: TextStyle(
+                  fontSize: 20,
+                  color: Colors.white,
+                  fontWeight: FontWeight.bold,
+                ),
+              ),
+            );
+          }).toList(),
+        ));
+  }
+}
+      
+      /*   backgroundColor: Colors.white,
         title: Text(
           "My App",
           style: TextStyle(
@@ -59,7 +86,7 @@ class _MyhomeState extends State<Myhome> {
     );
   }
 }
-
+ */
       /* Row(
         mainAxisAlignment: MainAxisAlignment.center,
         children: [
