@@ -1,9 +1,9 @@
 class Information {
-  String? datas;
-  String? player;
+  String datas;
+  String player;
 
   Information({
-    this.datas,
-    this.player,
+    required this.datas,
+    required this.player,
   });
 }

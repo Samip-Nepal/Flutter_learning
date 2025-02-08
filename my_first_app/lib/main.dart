@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:my_first_app/Newextract.dart';
 
 import 'cric.dart';
 
@@ -28,16 +29,26 @@ class _MyhomeState extends State<Myhome> {
         player: "Virat Kohli"),
     // int count = 0;
   ];
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      backgroundColor: Colors.white70,
+      appBar: AppBar(
         backgroundColor: Colors.white70,
-        appBar: AppBar(
-          backgroundColor: Colors.white70,
-        ),
-        body: Column(
-          children: information.map((data) {
-            return Container(
+      ),
+      body: Column(
+        children: information
+            .map((data) => Newextractwidget(
+                data: data,
+                delete: () {
+                  setState(() {
+                    information.remove(data);
+                  });
+                }))
+            .toList(),
+
+        /* return Container( 
               margin: EdgeInsets.all(20),
               padding: EdgeInsets.all(20),
               color: Colors.green,
@@ -46,14 +57,13 @@ class _MyhomeState extends State<Myhome> {
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
-                  fontWeight: FontWeight.bold,
-                ),
-              ),
-            );
-          }).toList(),
-        ));
+                  fontWeight: FontWeight.bold, */
+      ),
+    );
   }
 }
+
+
       
       /*   backgroundColor: Colors.white,
         title: Text(
