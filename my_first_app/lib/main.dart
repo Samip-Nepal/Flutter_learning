@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'cric.dart';
+
 void main() {
   runApp(MaterialApp(
     home: Myhome(),
@@ -14,11 +16,18 @@ class Myhome extends StatefulWidget {
 }
 
 class _MyhomeState extends State<Myhome> {
-  List<String> information = [
-    "The ODI series against England is India's only tune-up tournament for the Champions Trophy",
-    "to be held in Pakistan and Dubai from February 19"
+  List<Information> information = [
+    Information(
+        datas:
+            "The ODI series against England is India's only tune-up tournament for the Champions Trophy",
+        player: "Rohit Sharma"),
+
+    Information(
+        datas:
+            "The ODI series against England is India's only tune-up tournament for the Champions Trophy",
+        player: "Virat Kohli"),
+    // int count = 0;
   ];
-  // int count = 0;
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,7 +42,7 @@ class _MyhomeState extends State<Myhome> {
               padding: EdgeInsets.all(20),
               color: Colors.green,
               child: Text(
-                data,
+                "${data.datas}-${data.player}",
                 style: TextStyle(
                   fontSize: 20,
                   color: Colors.white,
