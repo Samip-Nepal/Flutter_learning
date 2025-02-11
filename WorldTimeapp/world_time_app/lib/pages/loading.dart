@@ -11,18 +11,22 @@ class loading extends StatefulWidget {
 }
 
 class _loadingState extends State<loading> {
-  void getdata() async {
-    Response response =
-        await get(Uri.parse('https://jsonplaceholder.typicode.com/todos/1'));
-    Map data = jsonDecode(response.body);
-    print(data);
-    print(data['title']);
+  void getTime() async {
+    Response response = await get(
+        Uri.parse('https://api.api-ninjas.com/v1/worldtime?city=london'));
+    Map datass = jsonDecode(response.body);
+    print(datass);
+    String Datetime = datass['datetime'];
+    String offset = datass['utc_offset'].substring(1, 2);
+    DateTime now = DateTime.parse(Datetime);
+
+    print(now);
   }
 
   @override
   void initState() {
     super.initState();
-    getdata();
+    getTime();
   }
 
   @override
